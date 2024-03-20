@@ -1,5 +1,10 @@
 *{
-    background:#E5E5E5;
+    background:url("imagenes/background.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
     font-family:"Inter";
     font-weight: 400;
     font-size: 32px;
@@ -9,10 +14,10 @@
 .titulo {
     padding-top: 10px;
     width: 65%;
-    font-size: 300%;
-    margin-left: 155px;
+    font-size: 150%;
+    margin-left: 50px;
     color: #0A3871;
-    margin-top: 90px;
+    margin-top: 5px;
     
 }
 
@@ -22,7 +27,7 @@
    width: 10%;
 }
 
-main{
+.main{
     width: 80%;
     margin:auto 40px auto auto;
     display: flex;
@@ -32,7 +37,7 @@ main{
     height: 70px;
 }
 
-.text-area{
+.campo-texto{
     border: none;
     color: #0A3871;
     margin-top: 90px;
@@ -43,29 +48,35 @@ main{
 ::placeholder { color: #0A3871;}
     .text-area :focus{
         outline: none;
-    }
-
+}
 
 .mensaje{
     background: white;
     background-image: url("imagenes/Muñeco.png");
+    image-orientation: flip;
     background-repeat: no-repeat;
-    border: none;
-    border-radius: 24px;
+    border: 200px;
+    border-right: 100px;
     color: #0A3871;
-    margin-left: 94px;
-    margin-top: 100px;
-    margin-left: 10px;
-    position: absolute;
+    margin: 100px 50px 50px 50px;
+    position: center;
+    border-radius: 5px;
+    padding: 100px 80px 100px 80px;
+    width: 100px;
+    height: 600px;
+}
+
+.mensaje{
+    font-size: 25px;
+}
+
+.campo-mensaje{
+    text-align: end;
+    width: 500px;
 }
 
 .mensaje:focus{
     outline: none;
-}
-
-.botones{
-    display: flex;
-    margin-top: 50px; 
 }
 
 .información{
@@ -73,17 +84,33 @@ main{
     font-size: 14px;
 }
 
-.encriptar{
-    background-color: #0A3871;
+.btn{
+    display: flex;
+    margin-top: 400px; 
+}
+
+.btnEncriptar{
     border: 1px solid #0A3871;
+    background-color: #0A3871;
+    color: aliceblue;
     border-radius: 24px;
-    color: white;
     cursor: pointer;
     height: 67px;
     width: 314px;
 }
 
-.desencriptar{
+.btnDesencriptar{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 14px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 10px;
+    width: 314px;
+}
+
+.btnCopiar{
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 14px;
@@ -101,29 +128,54 @@ main{
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 10px;
-    margin-top: 211%;
-    position: none;
+    margin: 5px 5px 50px 5px;
     width: 314px;
-
 }
 
-.left{
-    height: 650px;
+.btn button:hover{
+    background-color: #0056b3
 }
-
-.right{
-    height: calc(100% + 48px);
-}
-
-.pie-de-pagina{
-    background: none;
-    border: 1px solid none;
-    cursor: pointer;
-    height: 67px;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-bottom: 500px;
+    
+.footer{  
     width: 100%;
-    text-align: center;
+    bottom: 100px;
+    margin: 5px;
+    color: #0A3871;
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+    padding: 100px;
+    margin-bottom: 100px;
+    width: 100px;
+    height: 600px;
 }
+
+.footer{
+    outline: none;
+}
+
+.reset{
+    margin: 0 0.83rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    width: 1vw;
+    height: 13vw;
+    border-style: inset;
+  }
+
+@media only screen and (max-width: 768px){
+    .box-principal{
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
+.card{
+        width: 90%; 
+        margin: 10px 0; 
+}
+
+.box-botones{
+    flex-direction: column; 
+}
+  
